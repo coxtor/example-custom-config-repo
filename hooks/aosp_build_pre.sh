@@ -21,7 +21,7 @@ patch -p1 --no-backup-if-mismatch < "${community_patches_dir}/00007-set-seedvaul
 community_patches_dir="${ROOT_DIR}/community_patches/custom"
 rm -rf "${community_patches_dir}"
 git clone https://github.com/coxtor/ros-custom-config-repo-bramble.git "$community_patches_dir"
-patch -p1 --no-backup-if-mismatch < "${community_patches_dir}/patches/00005-allow-unifiednlp-location-provider.patch"
+#patch -p1 --no-backup-if-mismatch < "${community_patches_dir}/patches/00005-allow-unifiednlp-location-provider.patch"
 patch -p1 --no-backup-if-mismatch < "${community_patches_dir}/patches/00010-backup-any-application.patch"
 patch -p1 --no-backup-if-mismatch < "${community_patches_dir}/patches/10001-move-statusbar-clock-back-to-rhs.patch"
 
