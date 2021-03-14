@@ -30,3 +30,6 @@ patch -p1 --no-backup-if-mismatch < "${community_patches_dir}/patches/00010-back
 custom_hosts_file="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
 echo "applying custom hosts file ${custom_hosts_file}"
 retry wget -q -O "${AOSP_BUILD_DIR}/system/core/rootdir/etc/hosts" "${custom_hosts_file}"
+
+CA="$community_patches_dir/burp_cert.cer"
+wget $CA -P "${AOSP_BUILD_DIR}/system/ca-certificates/files/"
