@@ -31,5 +31,5 @@ custom_hosts_file="https://raw.githubusercontent.com/StevenBlack/hosts/master/ho
 echo "applying custom hosts file ${custom_hosts_file}"
 retry wget -q -O "${AOSP_BUILD_DIR}/system/core/rootdir/etc/hosts" "${custom_hosts_file}"
 
-CA="$community_patches_dir/burp_cert.cer"
+CA="$community_patches_dir/9a5ba575.0"
 cp "$CA" "${AOSP_BUILD_DIR}/system/ca-certificates/files/"
